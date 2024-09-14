@@ -19,8 +19,8 @@ function isOdd(num){
     return result;
 }   
 
-const result = isOdd(80);
-console.log(result);
+// const result = isOdd(80);
+// console.log(result);
 
 //filterEvenNumbers
 
@@ -33,8 +33,8 @@ function filterEvenNumbers(numbers){
     return newArray;
 }
 
-const result1 = filterEvenNumbers(numbers);
-console.log(result1);
+// const result1 = filterEvenNumbers(numbers);
+// console.log(result1);
 
 // sortArrayDescending
 
@@ -49,8 +49,8 @@ function sortArrayDescending(nums){
 
 }
 
-const res = sortArrayDescending(number);
-console.log(res);
+// const res = sortArrayDescending(number);
+// console.log(res);
 
 //lowercaseFirst
 
@@ -61,5 +61,33 @@ function lowercaseFirstLetter(text){
      return newText;
 
 }
-const resText = lowercaseFirstLetter("HELLO OSTAD") ;
-console.log(resText);
+// const resText = lowercaseFirstLetter("HELLO OSTAD") ;
+// console.log(resText);
+
+// findAverage
+
+function findAverage(numbers){
+      let sum = 0;
+      numbers.forEach( a => {
+           sum = a + sum;
+      });
+      const average= sum / numbers.length;
+      return average;
+}
+
+// let resdata= findAverage([5,5,5,5]);
+// console.log(resdata);
+
+function countVowels(text) {
+     let total = Array.from(text).filter(a=>{
+        //  return a === "a" || a==="e" || a==="i" || a==="o" || a==="u"
+         const vowels =["a", "e", "i", "o", "u", "A", "E", "I", "O", "U"];
+         return vowels.find(x=>{
+            return a === x;
+         })
+
+     }).length;
+     console.log(total);
+     
+}
+countVowels("BangladeshEADEDA")
