@@ -13,8 +13,12 @@ const res1 = calculateDifference(5, 1);
 const  res2 = calculateDifference(1, 5);
 console.log(res1);
 console.log(res2);
+
+
+
    // function-2
    // isOdd
+
 function isOdd(num){
     let result;
     if((num % 2) !== 0){
@@ -27,8 +31,11 @@ function isOdd(num){
 
 const result = isOdd(81);
 console.log(result);
+
+
 // function -3
 // findMin
+
 const points = [5, 2,8,6,4,3,9,50,12,98,70,500];
 function findMin(points){
     let minNum = points[0];
@@ -42,6 +49,7 @@ function findMin(points){
 
 const result2 = findMin(points);
 console.log(result2);
+
 
 // function-4
 //filterEvenNumbers
@@ -57,6 +65,7 @@ function filterEvenNumbers(numbers){
 
 const result1 = filterEvenNumbers(numbers);
 console.log(result1);
+
 
 // function-5
 // sortArrayDescending
@@ -90,6 +99,7 @@ console.log(resText);
 
 //function-7
 // countVowels
+
 function countVowels(text) {
     let total = Array.from(text).filter(a=>{
         const vowels =["a", "e", "i", "o", "u", "A", "E", "I", "O", "U"];
@@ -109,6 +119,7 @@ function countVowels(text) {
 
 // function -8
 // findAverage
+
 function findAverage(numbers){
     let sum = 0;
     numbers.forEach( a => {
