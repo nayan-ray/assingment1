@@ -1,14 +1,20 @@
     // function 1
-
+    //calculateDifference
 function calculateDifference(num1, num2){
-      return (num1 - num2)
+      if(num1 > num2){
+         return (num1 - num2)
+      }else{
+          return (num2 - num1)
+      }
+     
 }
 
 const res1 = calculateDifference(5, 1);
+const  res2 = calculateDifference(1, 5);
 console.log(res1);
-
+console.log(res2);
    // function-2
-
+   // isOdd
 function isOdd(num){
     let result;
     if((num % 2) !== 0){
@@ -19,10 +25,10 @@ function isOdd(num){
     return result;
 }   
 
-const result = isOdd(80);
+const result = isOdd(81);
 console.log(result);
 // function -3
-
+// findMin
 const points = [5, 2,8,6,4,3,9,50,12,98,70,500];
 function findMin(points){
     let minNum = points[0];
