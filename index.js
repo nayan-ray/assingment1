@@ -9,10 +9,11 @@ function calculateDifference(num1, num2){
      
 }
 
+
 const res1 = calculateDifference(5, 1);
 const  res2 = calculateDifference(1, 5);
-console.log(res1);
-console.log(res2);
+// console.log(res1);
+// console.log(res2);
 
 
 
@@ -30,7 +31,7 @@ function isOdd(num){
 }   
 
 const result = isOdd(81);
-console.log(result);
+// console.log(result);
 
 
 // function -3
@@ -48,7 +49,7 @@ function findMin(points){
 }
 
 const result2 = findMin(points);
-console.log(result2);
+// console.log(result2);
 
 
 // function-4
@@ -64,7 +65,7 @@ function filterEvenNumbers(numbers){
 }
 
 const result1 = filterEvenNumbers(numbers);
-console.log(result1);
+// console.log(result1);
 
 
 // function-5
@@ -82,7 +83,7 @@ function sortArrayDescending(nums){
 }
 
 const res = sortArrayDescending(number);
-console.log(res);
+// console.log(res);
 
 // function-6
 //lowercaseFirst
@@ -95,7 +96,7 @@ function lowercaseFirstLetter(text){
 
 }
 const resText = lowercaseFirstLetter("HELLO OSTAD") ;
-console.log(resText);
+// console.log(resText);
 
 //function-7
 // countVowels
@@ -112,7 +113,7 @@ function countVowels(text) {
     
 }
  const count = countVowels("Bangladesh");
- console.log(count);
+//  console.log(count);
  
 
 
@@ -129,7 +130,53 @@ function findAverage(numbers){
     return average;
 }
 
-let resdata= findAverage([5,5,5,5]);
-console.log(resdata);
+// let resdata= findAverage([5,5,5,5]);
+// console.log(resdata);
+
+
+const text =  "pwwkew";
+
+
+
+
+console.log("hello");
+
+let longestS = 0;
+let set = new  Set();
+let left  = 0;
+let right = 0;
+while(right <  text.length){
+   let letter  = text[right];
+    console.log(letter);
+    console.log(right);
+    
+   if(!set.has(letter)){
+       set.add(letter);
+       console.log(set);
+       
+       longestS  = Math.max(longestS, set.size);
+       console.log(longestS);
+       console.log('right');
+       console.log(right);
+       console.log('right');
+       right++;
+       
+       
+    //    pwwkew
+   }else{
+      
+      set.delete(text[left])
+      console.log(set);
+      
+      console.log('left')
+       console.log(left)
+       console.log('left')
+       left++;
+   }
+   
+   
+}
+
+// console.log(longestS);
 
 
