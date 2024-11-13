@@ -178,5 +178,43 @@ while(right <  text.length){
 }
 
 // console.log(longestS);
+console.log("binary search");
+
+
+//binary search
+const data = [2, 5, 8, 9, 10]
+const size=data.length;
+let key =8;
+let l=0;
+let r =data.length-1;
+let mid = Math.floor((l+r)/2);
+let stop =0;
+
+ while (stop<size) {
+    if(key == data[mid]){
+        console.log(mid);
+        stop=size;
+        break;
+    }
+
+    if(l !== r){
+        if(key<data[mid]){
+            r=mid-1;
+            mid = Math.floor((l+r)/2);
+        }
+        if(key>data[mid]){
+            l=mid+1;
+            mid = Math.floor((l+r)/2);
+        }
+
+
+    }else{
+        console.log("not found");
+        stop=size; 
+        
+
+    }
+ }
+
 
 
