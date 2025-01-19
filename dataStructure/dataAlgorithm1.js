@@ -3,8 +3,8 @@
 //Question 3: corresponding value from the arrays(compare value of two arrays),method 1,2.
 //Question 4: recursion [sum of element of an array]
   
-  //........1
-  // counting character from the string
+//........1
+// counting character from the string
 
 const str = "Hello, World!";
 function characterCount (str) {
@@ -12,99 +12,97 @@ function characterCount (str) {
      str = str.replace(/[^a-zA-Z]/g, '');
      let charList = {};
      for (let i = 0; i < str.length; i++) {
-        
-
-       let char = str[i].toLowerCase();
-       //remove unnecessary character
-        //  if(char === " " || char === '.' || char === ',' || char === '?' || char === '!') {
-        //      console.log(typeof char)
-        //       continue;
-        //  }
-
-       if (charList[char] > 0) {
-           charList[char]++;
-           } else {
-                            
-               charList[char] = 1;
-          }
+        let char = str[i].toLowerCase();
+        if (charList[char] > 0) {
+            charList[char]++;
+        } else {
+            charList[char] = 1;
         }
-        return charList;
+    }
+    return charList;
 }
 
 // console.log(characterCount(str))
 
-  //........2
-  //lowest and height value from and array and remove unnecessary value
+//........2
+//lowest and height value from and array and remove unnecessary value
+const arr =[5, 8, 9, 2, 1, -3, -7, "string", 7, 3, 6, 4, 0];
  
-  const arr =[5, 8, 9, 2, 1, -3, -7, "string", 7, 3, 6, 4, 0];
- 
-  function lowestAndHighestValue(arr) {
-     if(arr.length === 0){
+function lowestAndHighestValue(arr) {
+    if(arr.length === 0){
         return "Array is empty. Please add some values.";
-     }
+    }
     let lowest = arr[0];
     let highest = arr[0];
 
     for (let i = 1; i < arr.length; i++) {
         //skip non-numeric value
-       if(typeof arr[i] === "string"){
-           continue ;
-       }
+        if(typeof arr[i] === "string"){
+            continue ;
+        }
 
-       if(lowest > arr[i]){
-           lowest = arr[i];
-       }
+        if(lowest > arr[i]){
+            lowest = arr[i];
+        }
 
-       if( highest < arr[i]){
-          highest = arr[i];
-       }
-
-       
+        if( highest < arr[i]){
+            highest = arr[i];
+        }
     }
 
     return [lowest, highest];
-
-  }
+}
 
 //   console.log(lowestAndHighestValue(arr))
  
 //Question 3: corresponding value from the arrays(compare value of two arrays),method 1,2.
-  //method 1
-  // console.log(5 ** 3)
-
+//method 1
+// console.log(5 ** 3)
 
 //Question 4: recursion [sum of element of an array]
-
 function sumOfArray(arr){
-  if(arr.length === 0){
-    return 0;
-  }
+    if(arr.length === 0){
+        return 0;
+    }
 
- let sum;
-//  for(let i = 0; i < arr.length; i++){
-//      sum = sum + arr[i];
-//  }
-
-sum = arr[0] + sumOfArray(arr.slice(1));
-    //2+3 
-
-
-  
-  return sum;
+    let sum = arr[0] + sumOfArray(arr.slice(1));
+    return sum;
 }
 
 // console.log(sumOfArray([2, 3, 5, 5]))
 
-
 function findOddNumber(arr) {
     let oddNumber = [];
     for (let i = 0; i < arr.length; i++) {
-      if (arr[i] % 2 !== 0) {
-        oddNumber.push(arr[i]);
+        if (arr[i] % 2 !== 0) {
+            oddNumber.push(arr[i]);
         }
-      }
-      return oddNumber;
+    }
+    return oddNumber;
 }
 
+// console.log(findOddNumber([5,2,6,7,8,5]))
 
-console.log(findOddNumber([5,2,6,7,8,5]))
+//binary-search
+function binarySearch(arr, target) {
+    arr.sort((a, b) => a - b); // Sort the array
+    let left = 0;
+    let right = arr.length - 1;
+    while (left <= right) {
+        let mid = Math.floor((left + right) / 2);
+
+        if (arr[mid] === target) {
+            return mid;
+        }
+
+        if (arr[mid] > target) {
+            right = mid - 1;
+        } else {
+            left = mid + 1;
+        }
+    }
+
+    return -1; // Return -1 if the target is not found
+}
+
+console.log(binarySearch([1, 2, 3, 4 , 5], 1)); // This will now work correctly
