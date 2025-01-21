@@ -105,4 +105,36 @@ function binarySearch(arr, target) {
     return -1; // Return -1 if the target is not found
 }
 
-console.log(binarySearch([1, 2, 3, 4 , 5], 1)); // This will now work correctly
+// console.log(binarySearch([1, 2, 3, 4 , 5], 1)); // This will now work correctly
+//bubble sort
+
+function bubbleSort(arr){
+   let isSwap;
+    for(let i = 0; i < arr.length; i++){
+        isSwap = false;
+        console.log("start");           
+        console.log(isSwap)
+        for(let j = 0; j < arr.length - 1; j++){
+            console.log(arr[j], arr[j+1])
+            if(arr[j] > arr[j + 1]){
+                let temp = arr[j];
+                arr[j] = arr[j + 1];
+                arr[j + 1] = temp;
+                console.log("medium");           
+                console.log(isSwap)
+                console.log(arr);
+                isSwap = true;
+                }
+        }
+        console.log(isSwap);
+        console.log(!isSwap);
+        if(!isSwap) { 
+            console.log("break");           
+            console.log(isSwap)
+            break;
+        }
+    }
+  return arr;
+}
+
+console.log(bubbleSort([1,2,3,4,8,6]))
