@@ -178,10 +178,13 @@ function inSertionSort(arr){
     for(let i=1; i<arr.length; i++){
          for(let j= i; j>0; j--){
             if(arr[j] < arr[j-1]){
-                let temp = arr[j-1];
-                arr[j-1] = arr[j];
-                arr[j] = temp;
+                // let temp = arr[j-1];
+                // arr[j-1] = arr[j];
+                // arr[j] = temp;
+                [arr[j], arr[j-1]] = [arr[j-1], arr[j]];
 
+          }else{
+            break;
           }
         }
     }
@@ -190,4 +193,28 @@ function inSertionSort(arr){
 
 
 
-console.log(inSertionSort([5,2,1,7,9]))
+// console.log(inSertionSort([5,2,1,7,9]))
+
+//two sum
+
+function twoSum(arr, target){
+
+    for(let i=0; i<arr.length; i++){
+        console.log(i);
+        
+        for(let j=i+1; j<arr.length; j++){
+            console.log(i, j);
+            console.log(arr[i], arr[j]);
+            console.log((arr[i] + arr[j]));
+            
+            if((arr[i] + arr[j]) === target){
+                return [i, j];
+            }
+        }
+      
+    }
+    return false;
+}
+
+
+console.log(twoSum([2,5,3,7], 110));
