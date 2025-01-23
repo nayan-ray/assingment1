@@ -137,4 +137,57 @@ function bubbleSort(arr){
   return arr;
 }
 
-console.log(bubbleSort([1,2,3,4,8,6]))
+// console.log(bubbleSort([1,2,3,4,8,6]))
+
+//selection sort
+
+function selectionSort(arr){
+    for(let i=0; i<arr.length; i++){
+        let minIndex = i;
+        console.log(minIndex)
+        console.log(arr[minIndex])
+        for(let j=i + 1; j<arr.length; j++){
+            console.log(j);
+            
+            console.log(arr[j])
+             console.log(minIndex)
+            if(arr[j] < arr[minIndex]){
+                console.log(arr[j], arr[minIndex] );
+                minIndex = j;
+              }
+            }
+       if(minIndex !== i){
+        let temp = arr[i];
+        arr[i] = arr[minIndex];
+        arr[minIndex] = temp;
+        console.log(arr);
+       }
+
+  
+            
+
+    }
+    return arr;
+}
+
+// console.log(selectionSort([1,2,3,4,5,6]))
+
+//insertion sort
+
+function inSertionSort(arr){
+    for(let i=1; i<arr.length; i++){
+         for(let j= i; j>0; j--){
+            if(arr[j] < arr[j-1]){
+                let temp = arr[j-1];
+                arr[j-1] = arr[j];
+                arr[j] = temp;
+
+          }
+        }
+    }
+    return arr;
+}
+
+
+
+console.log(inSertionSort([5,2,1,7,9]))
